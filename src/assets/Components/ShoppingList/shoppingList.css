@@ -1,4 +1,5 @@
 .wrap-list {
+  clear: both;
     font-size: 2em;
     height: 85%;
     padding: 1.25em 0;

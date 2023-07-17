@@ -1,9 +1,20 @@
-.addItemForm {
+.shadowContainer{
+    float: right;
     width: 100%;
+    box-shadow: inset 0 0 0.5125em black;
+    
+}
+.addItemForm {
+    width: 98%;
     display: flex;
     justify-content: flex-start;
-    margin: 0.5em 0 0;
-    padding: 0 1em 0 1em;
+    margin: 1em 0em 1em 0.5em;
+    padding: 0 0em 0 0em;
+    border: solid 1px black;
+	background: white;
+    
+	
+    
     
 }
 
@@ -14,21 +25,28 @@
 }
 .addItemForm input[type='text'] {
     flex-grow: 1;
-    max-width: calc(100% -3.125em);
     min-height: 3em;
     font-size: 1em;
     padding: 0.25em;
-    border: solid black 1px;
-    border-radius: 0.5em;
     margin-right: 0.25em;
+    margin-left: 0.5em;
     outline: none;
 }
+
 
 button{
     height: 3em;
     width: 3em;
-    border: solid black 1px;
-    border-radius: 0.5em;
     margin-top: 0.25em;
 
 }
+.plus{
+    background: grey;
+    height: 100%;
+    width: 100%;
+    
+}
+.plus:hover{
+    color: rgb(244, 244, 244);
+    cursor: pointer;
+  }

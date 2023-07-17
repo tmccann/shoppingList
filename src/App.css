@@ -13,7 +13,7 @@ html,body{
 	min-height: 100%;
 }
 body{
-	background-image: radial-gradient(mintcream 0%, gray 100%);
+	/* background-image: radial-gradient(mintcream 0%, gray 100%); */
 	font-family: "Trebuchet MS";
 }
 .wrap{
@@ -23,7 +23,7 @@ body{
 	border-radius: 1.25em;
 	border: solid 0.5em #2c3033;
 	background: white;
-	box-shadow: 0 0 0 0.0625em rgba(255,255,255,.4),	0 0 0 0.25 #2c3033;
+	/* box-shadow: 0 0 0 0.0625em rgba(255,255,255,.4),	0 0 0 0.25 #2c3033; */
 }
 
 @media only screen and (max-width: 700px) {
