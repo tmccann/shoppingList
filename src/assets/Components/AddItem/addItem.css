@@ -1,0 +1,34 @@
+.addItemForm {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0.5em 0 0;
+    padding: 0 1em 0 1em;
+    
+}
+
+.addItemForm label{
+
+    position: absolute;
+    left: -999em;
+}
+.addItemForm input[type='text'] {
+    flex-grow: 1;
+    max-width: calc(100% -3.125em);
+    min-height: 3em;
+    font-size: 1em;
+    padding: 0.25em;
+    border: solid black 1px;
+    border-radius: 0.5em;
+    margin-right: 0.25em;
+    outline: none;
+}
+
+button{
+    height: 3em;
+    width: 3em;
+    border: solid black 1px;
+    border-radius: 0.5em;
+    margin-top: 0.25em;
+
+}
