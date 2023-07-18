@@ -57,7 +57,7 @@ const App = () => {
   return (
     <div className="wrap">
       <Header />
-      
+      <AddItem />
       <ShoppingList
           items={items}
           handleCheck={handleCheck}

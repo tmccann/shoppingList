@@ -10,7 +10,7 @@
     justify-content: flex-start;
     margin: 1em 0em 1em 0.5em;
     padding: 0 0em 0 0em;
-    border: solid 1px black;
+    /* border: solid 1px black; */
 	background: white;
     
 	
@@ -25,28 +25,33 @@
 }
 .addItemForm input[type='text'] {
     flex-grow: 1;
-    min-height: 3em;
+    min-height: 1em;
     font-size: 1em;
     padding: 0.25em;
     margin-right: 0.25em;
     margin-left: 0.5em;
     outline: none;
+    border: solid black 2px;
+    border-radius: 0.5em;
 }
 
 
 button{
     height: 3em;
     width: 3em;
-    margin-top: 0.25em;
+
 
 }
 .plus{
     background: grey;
+    border: solid black 2px;
+    border-radius: 0.5em;
     height: 100%;
     width: 100%;
     
 }
 .plus:hover{
+    background: green;
     color: rgb(244, 244, 244);
     cursor: pointer;
   }
