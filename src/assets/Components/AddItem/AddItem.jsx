@@ -3,13 +3,13 @@ import './addItem.css'
 
 const AddItem = () => {
 
-  const addItem = (i) =>{
-    console.log(i)
+  const addItem = (e) =>{
+    e.preventDefault
 
   }
   return (
     <div className="shadowContainer">
-    <form className='addItemForm'>
+    <form className='addItemForm' onSubmit={{handleSubmit}}>
         <label htmlFor='addItem'>Add Item</label>
         <input
             autoFocus
@@ -17,13 +17,12 @@ const AddItem = () => {
             type='text'
             placeholder='Add Item'
             required
-            // value={newItem}
-            // onChange={(e) => setnewItem(e.target.value)}
+            value={newItem}
+            onChange={(e) => setnewItem(e.target.value)}
         />
         <button 
             type='submit'
             aria-label='Add Item'
-            onClick={addItem((i) => (i.value))}
         >
         <FaPlus className="plus work"/>
         </button>
