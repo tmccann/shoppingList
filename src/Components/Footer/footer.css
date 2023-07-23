@@ -1,0 +1,26 @@
+.footer{
+    margin-top: auto;
+    text-align: center;
+    height: 1.5em;
+    border-radius: 0px 0px 10px 10px;
+    font: bold 1em/2em arial;
+    text-align: center;
+    color: white;
+    padding-bottom: 3em;
+    box-shadow: 0 -2px 3px 2px rgba(0,0,0,.4),0 2px 2px 2px rgba(0,0,0,.4);
+    background-image: linear-gradient(#687480 0%, #3b4755 100%);
+}
+  
+
+@media screen and (max-width: 550px) {
+
+  
+    span {
+      /* Reduce input width and font size for smaller screens */
+      width: 40%;
+      font: bold 0.75em/1em arial;
+      margin:0;
+
+    }
+  }
+  

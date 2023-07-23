@@ -1,0 +1,66 @@
+.wrap-list {
+      margin: 0.5em;
+      font-size: 2em;
+      height: 100%;
+      padding: 0.25em 0;
+      border-radius: 0 0 0.625em 0.625em;
+  
+  }
+  @media only screen and (max-width: 700px) {
+    .wrap-list {
+      font-size: 1.5em;
+    }
+  }
+    .item input[type="checkbox"] {
+      text-align: center;
+      min-width: 2em;
+      height: 2em;
+      cursor: pointer;
+      margin-left: 0.5em;
+      accent-color:green;
+    }
+  
+    .item input[type="checkbox"]:focus + label{
+      text-decoration: underline;
+  
+    }
+  
+    .list {
+      font-size: 1rem;
+      list-style: none;
+      margin: 0.2em;
+      color: rgba(0, 0, 0, 0.7);
+    }
+    
+    ul li:nth-child(odd) {
+  
+      background-color:	rgb(211,211,211);
+    }
+    svg{
+      min-width: 2em;
+      min-height: 1.5em;
+      margin-right: 0.5em;
+    }
+    svg:hover {
+      color: rgba(255,0,0);
+      cursor: pointer;
+    }
+    
+    .list li {
+      display: flex;
+      justify-content:space-around;
+      align-items: center;
+    }
+    
+    .list label {
+      padding: 0.625em;
+      cursor: pointer;
+      flex-grow: 1;
+      transition: all 0.3s ease;
+  
+    }
+  
+  
+    
+    
+    

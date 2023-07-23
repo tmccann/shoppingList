@@ -1,0 +1,63 @@
+.addItemContainer {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.addItemForm {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    margin: 0 0.25em 0 0.25em;
+    border-bottom: 1px solid #ccc;
+}
+
+.addItemForm label {
+    display: none;
+}
+
+.addItemForm input[type='text'] {
+    flex-grow: 1;
+    min-height: 2.5em;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-right: 1em;
+    border: solid 2px grey;
+    border-radius: 0.5em;
+}
+
+button {
+    background: grey;
+    border: solid 2px grey;
+    border-radius: 0.5em;
+    cursor: pointer;
+  }
+.plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: grey;
+    border: solid grey 2px;
+    border-radius: 0.5em;
+    height: 100%;
+    width: 100%;
+  }
+button .plus:hover {
+    background: green;
+    border: solid 2px green;
+    color: white;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 550px) {
+
+  
+    .addItemForm input[type='text'] {
+      /* Reduce input width and font size for smaller screens */
+      width: 40%;
+      font-size: 0.9em;
+    }
+  }
+
