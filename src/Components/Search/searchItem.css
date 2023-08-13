@@ -1,0 +1,34 @@
+/* Style for .searchForm */
+.searchForm {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+
+/* Style for input in .searchForm */
+.searchForm input[type='text'] {
+    flex-grow: 1;
+    min-height: 2.5em;
+    font-size: 1em;
+    padding: 0.5em;
+    margin-right: 1em;
+    border: solid 2px grey;
+    border-radius: 0.5em;
+}
+
+.searchForm label {
+    display: none; /* Hide the label visually */
+  }
+  
+
+
+/* Media query for smaller screens */
+@media screen and (max-width: 550px) {
+    /* Adjust input width and font size for smaller screens */
+    .searchForm input[type='text'] {
+        width: 40%;
+        font-size: 0.9em;
+    }
+}

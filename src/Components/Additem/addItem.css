@@ -3,15 +3,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 1em;
 }
 
 .addItemForm {
     display: flex;
     align-items: center;
-    padding: 1em;
-    margin: 0 0.25em 0 0.25em;
-    border-bottom: 1px solid #ccc;
+    padding: 0.5em;
+    margin-right: 1em;
+ 
+    
 }
 
 .addItemForm label {
@@ -23,23 +23,16 @@
     min-height: 2.5em;
     font-size: 1em;
     padding: 0.5em;
-    margin-right: 1em;
+    margin-right: 0.1em;
     border: solid 2px grey;
     border-radius: 0.5em;
 }
 
-button {
-    background: grey;
-    border: solid 2px grey;
-    border-radius: 0.5em;
-    cursor: pointer;
-  }
 .plus {
     display: flex;
     align-items: center;
     justify-content: center;
     background: grey;
-    border: solid grey 2px;
     border-radius: 0.5em;
     height: 100%;
     width: 100%;
