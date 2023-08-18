@@ -2,7 +2,7 @@ import React from 'react'
 import './lists.css'
 import {FaTrashAlt} from 'react-icons/fa'
 
-const Lists = ( {listItems, handleCheck, deleteItem } ) => {
+const Lists = ( {listItems, handleCheck, deleteItem, reqUl} ) => {
   return (
     <section className='wrap-list'>
       {/* check listItems state has values */}
@@ -17,7 +17,10 @@ const Lists = ( {listItems, handleCheck, deleteItem } ) => {
       {/* create checkbox to mark of done items */}
               <input
                 type="checkbox"
-                onChange={()=> handleCheck(item.id)}
+                onChange={() => {
+                  handleCheck(item.id);
+                }}
+                
                 checked={item.checked}
               />
               <label

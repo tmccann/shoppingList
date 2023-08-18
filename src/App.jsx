@@ -30,7 +30,7 @@ const App = () => {
         setIsLoading(false)
       }
     }
-    setTimeout(()=>{ fetchItems()},2000)
+    setTimeout(() => { fetchItems() }, 2000)
 
   }, [])
 
@@ -39,62 +39,62 @@ const App = () => {
   //   localStorage.setItem('shoppingList', JSON.stringify(newItems));
   // }
 
-  
-    const addItems = async (item) => {
-      const id = listItems.length ? listItems[listItems.length - 1].id + 1 : 1;
-      const addItem = { id, checked: false, item };
-      console.log(addItem);
-      const updatedListItems = [...listItems, addItem];
-      setListItem(updatedListItems);
-      setNewItems('');
-  
-      const postOptions = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(addItem) 
-            };
-  
-      try {
-        const result = await apiRequests(API_URL, postOptions);
-        console.log('API POST response:', result);
-      } catch (error) {
-        console.error('Error posting data:', error);
-      }
-    };
-  
 
-    const handleCheck = async (id) => {
-      // Use map to go through items and find matching id
-      const updatedItems = listItems.map((item) =>
-        item.id === id ? { ...item, checked: !item.checked } : item
-      );
-    
-      // Update the state with the new list of items
-      setListItem(updatedItems);
-    
-      // Find the item with the specified id in the list
-      const selectedItem = listItems.find((item) => item.id === id);
-    
-      // Prepare the PATCH request options
-      const updateOptions = {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ checked: selectedItem.checked }),
-      };
-    
-      try {
-        const reqUrl = `${API_URL}/${id}`;
-        const result = await apiRequests(reqUrl, updateOptions);
-        console.log('API PATCH response:', result);
-      } catch (error) {
-        console.error('Error patching data:', error);
-      }
+  const addItems = async (item) => {
+    const id = listItems.length ? listItems[listItems.length - 1].id + 1 : 1;
+    const addItem = { id, checked: false, item };
+    console.log(addItem);
+    const updatedListItems = [...listItems, addItem];
+    setListItem(updatedListItems);
+    setNewItems('');
+
+    const postOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(addItem)
     };
+
+    try {
+      const result = await apiRequests(API_URL, postOptions);
+      console.log('API POST response:', result);
+    } catch (error) {
+      console.error('Error posting data:', error);
+    }
+  };
+
+
+  const handleCheck = async (id) => {
+    // Use map to go through items and find matching id
+    const updatedItems = listItems.map((item) =>
+      item.id === id ? { ...item, checked: !item.checked } : item
+    );
+
+    // Update the state with the new list of items
+    setListItem(updatedItems);
+
+    // Find the item with the specified id in the list
+    const selectedItem = updatedItems.filter((item) => item.id === id);
+    console.log(selectedItem)
+
+    // Prepare the PATCH request options
+    const updateOptions = {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
     
+      body: JSON.stringify({ checked: selectedItem[0].checked }),
+
+    };
+
+    const reqUrl = `${API_URL}/${id}`;
+    const result = await apiRequests(reqUrl, updateOptions);
+    console.log('API PATCH response:', result);
+    if (result) setFetchErr(result)
+  };
+
   const deleteItem = (id) => {
     // use filter to make you list with onle required items
     const filteredlist = listItems.filter((items) => items.id !== id)
