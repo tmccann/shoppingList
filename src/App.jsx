@@ -95,11 +95,17 @@ const App = () => {
     if (result) setFetchErr(result)
   };
 
-  const deleteItem = (id) => {
+  const deleteItem = async (id) => {
     // use filter to make you list with onle required items
     const filteredlist = listItems.filter((items) => items.id !== id)
     setListItem(filteredlist)
-  }
+
+    const deleteOptions = {method: 'DELETE'}
+    const reqUrl = `${API_URL}/${id}`;
+    const result = await apiRequests(reqUrl, deleteOptions);
+    if (result) setFetchErr(result)
+    };
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()

@@ -21,16 +21,6 @@
       "item": "pizza"
     },
     {
-      "id": 5,
-      "checked": false,
-      "item": "monkey nuts"
-    },
-    {
-      "id": 6,
-      "checked": false,
-      "item": "toast"
-    },
-    {
       "id": 7,
       "checked": false,
       "item": "beans"
@@ -38,7 +28,7 @@
     {
       "id": 8,
       "checked": false,
-      "item": "bread"
+      "item": "milk"
     }
   ]
 }
